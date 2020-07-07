@@ -1,0 +1,105 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: url(img/back1.jpg);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  min-height: 100vh;
+  
+}
+.clock{
+  /* color:rgb(255, 240, 72) */
+  width: 350px;
+  height: 350px;
+  background:url(img/dlclo.png);
+  /* background: black; */
+  background-size:cover ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  /* border: 10px solid #B0B0B0; */
+  /* box-shadow: inset 0 0 30px rgba(0,0,0,.1),
+              0 20px 20px rgba(0,0,0,.2),
+              0 0 0 4px rgba(255,255,255,1); */
+
+  box-shadow: inset 0 0 30px rgba(0,0,0,.1), 
+              0 20px 20px rgba(0,0,0,.2), 
+              /* 0px 0px 20px 18px rgba(255,255,255,1);  */
+              0px 0px 20px 18px rgba(255, 240, 72,1)           
+}
+.clock::before{
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: #FF8403;
+  border-radius: 50%;
+  z-index: 100000;
+  border: 4px solid #D9CA3E;
+}
+.hour,
+.minute,
+.second{
+  position: absolute;
+}
+.hour, .hr{
+  width:140px ;
+  height: 140px;
+  /* background: gray; */
+}
+.minute, .min{
+  width: 160px;
+  height: 200px;
+  /* background: yellow; */
+}
+.second, .sec{
+  width: 180px;
+  height: 260px;
+  /* background: #007ACC; */
+}
+.hr, 
+.min,
+.sec{
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  /* align-items: center; */
+  /* border-radius: 50%; */
+}
+.hr::before{
+    content: "";
+    width: 10px;
+    height: 77px;
+    background: red;
+    border-radius: 10px 10px 0 0;
+}
+
+.min::before{
+  content: "";
+    width: 4px;
+    height: 100px;
+    background: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.sec::before{
+    content: "";
+    width: 2px;
+    height: 160px;
+    background: black;
+    border-radius: 10px 10px 0 0;
+}
+
+.sec::after {
+  content: "";
+  width: 8px;
+  height: 46px;
+  top: 147px;
+  background: black;
+  border-radius: 10px 10px 10px 10px;
+  position: absolute;
+
+
